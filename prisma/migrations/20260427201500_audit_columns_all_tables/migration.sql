@@ -1,0 +1,68 @@
+-- Add created/updated by columns across main tenant tables (idempotent).
+
+ALTER TABLE "Partner"
+  ADD COLUMN IF NOT EXISTS "createdByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "createdByName" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByName" TEXT;
+
+ALTER TABLE "Vehicle"
+  ADD COLUMN IF NOT EXISTS "createdByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "createdByName" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByName" TEXT;
+
+ALTER TABLE "Campaign"
+  ADD COLUMN IF NOT EXISTS "createdByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "createdByName" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByName" TEXT;
+
+ALTER TABLE "Contract"
+  ADD COLUMN IF NOT EXISTS "createdByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "createdByName" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByName" TEXT;
+
+ALTER TABLE "Quotation"
+  ADD COLUMN IF NOT EXISTS "createdByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "createdByName" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByName" TEXT;
+
+ALTER TABLE "Receipt"
+  ADD COLUMN IF NOT EXISTS "createdByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "createdByName" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByName" TEXT;
+
+ALTER TABLE "TaskQueueRequest"
+  ADD COLUMN IF NOT EXISTS "createdByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "createdByName" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByName" TEXT;
+
+ALTER TABLE "RecoveryCase"
+  ADD COLUMN IF NOT EXISTS "createdByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "createdByName" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByName" TEXT;
+
+ALTER TABLE "Commission"
+  ADD COLUMN IF NOT EXISTS "createdByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "createdByName" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByName" TEXT;
+
+ALTER TABLE "ExpenseCategory"
+  ADD COLUMN IF NOT EXISTS "createdByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "createdByName" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByName" TEXT;
+
+ALTER TABLE "Expense"
+  ADD COLUMN IF NOT EXISTS "createdByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "createdByName" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByUserId" TEXT,
+  ADD COLUMN IF NOT EXISTS "updatedByName" TEXT;
+
